@@ -113,7 +113,7 @@
 <!-- MENU KATEGORI -->
 <div class="menu">
   <button class="active" onclick="switchCategory('farm', this)">🌾 Farm</button>
-  <button onclick="switchCategory('rare', this)">💎 Rare</button>
+  <button onclick="switchCategory('rare', this)">💎 Item</button>
 </div>
 
 <div class="container" id="itemList"></div>
@@ -128,7 +128,7 @@
   const data = {
     farm: [
       { name: 'Crimson Fungus', icon: 'fungus.png', current: 40, previous: 2 },
-      { name: 'Sea Pickle', icon: 'pickle.png', current: 50, previous: 8 },
+      { name: 'Sea Pickle', icon: 'pickle.png', current: 50, previous: 55 },
       { name: 'Sugarcane', icon: 'sugarcane.png', current: 50, previous: 10 },
       { name: 'Bamboo', icon: 'bamboo.png', current: 50, previous: 5 },
       { name: 'Cactus', icon: 'Cactus.png', current: 70, previous: 10 },
@@ -137,9 +137,12 @@
       { name: 'Pumpkin', icon: 'pumpkin.png', current: 80, previous: 16 }
     ],
     rare: [
-      { name: 'Netherite Ingot', icon: 'netherite_ingot.png', current: 5000, previous: 4500 },
-      { name: 'Netherite Block', icon: 'netherite_block.png', current: 45000, previous: 45000 },
-      { name: 'Diamond Block', icon: 'diamond_block.png', current: 8000, previous: 8200 }
+      { name: 'Elytra', icon: 'elytra.png', current: 300000, previous: 100000 },
+      { name: 'Netherite Ingot', icon: 'netherite.png', current: 25000, previous: 4500 },
+      { name: 'Netherite Block', icon: 'netherite_block.png', current: 255000, previous: 45000 },
+      { name: 'Ancient Debris', icon: 'diamond_block.png', current: 500, previous: 450 },
+      { name: 'Diamond Block', icon: 'diamond_block.png', current: 1100, previous: 1200 },
+      { name: 'Emerald Block', icon: 'emerald_block.png', current: 1000, previous: 1050 }
     ]
   };
 
