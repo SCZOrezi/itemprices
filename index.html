@@ -120,7 +120,7 @@
 
 <script>
   // LAST UPDATE
-  const lastUpdate = new Date('2026-01-25');
+  const lastUpdate = new Date('2026-01-26');
   document.getElementById('lastUpdate').innerText =
     lastUpdate.toLocaleDateString('id-ID');
 
@@ -150,7 +150,13 @@
 
   function render(category) {
     container.innerHTML = '';
-    data[category].forEach(item => {
+
+  // COPY + SORT (biar data asli tidak berubah)
+    const sortedItems = [...data[category]].sort(
+      (a, b) => b.current - a.current
+    );
+
+    sortedItems.forEach(item => {
       let status, arrow;
       if (item.current > item.previous) {
         status = 'up'; arrow = '▲';
@@ -178,7 +184,7 @@
       `;
     });
   }
-
+  
   function switchCategory(cat, el) {
     document.querySelectorAll('.menu button')
       .forEach(b => b.classList.remove('active'));
